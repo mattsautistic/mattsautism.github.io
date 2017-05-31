@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased
+}
+:focus {
+    outline: none
+}
+body {
+    background-color: #181D26;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    display: block;
+    font-weight: 400
+}
+li,
+span,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1
+}
+p {
+    display: block
+}
+a {
+    text-decoration: none
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer
+}
+title {
+    display: none
+}
+@font-face {
+    font-family: lobster
+}
+header {
+    font-family: 'lobster', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    width: 100%;
+    margin: 0 0 20px
+}
+header h1 {
+    color: #fff;
+    font-size: 2.5em
+}
+div.center {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 100%
+}
+.sbs {
+    font-size: 0;
+    margin: 20px 0 0
+}
+.sb {
+    background-color: #fff;
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    margin: 10px;
+    text-align: center;
+    opacity: .99;
+    border-radius: 20%;
+    display: inline-block
+}
+.sb .fa {
+    font-size: 38px;
+    line-height: 38px;
+    margin: auto;
+    vertical-align: middle;
+    -webkit-transition: all .18s;
+    transition: all .18s
+}
+.sb.reddit .fa {
+    color: #ff5700
+}
+.sb.twitter .fa {
+    color: #3CF
+}
+.sb.youtube .fa {
+    color: #DC4A38
+}
+.sb.discord .fa {
+    color: #7289da
+}
+.sb:hover .fa {
+    color: #fff
+}
+.sb.reddit:hover {
+    background-color: #ff5700
+}
+.sb.twitter:hover {
+    background-color: #3CF
+}
+.sb.youtube:hover {
+    background-color: #DC4A38
+}
+.sb.discord:hover {
+    background-color: #7289da
+}
+.button-github {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 8px
+}
+.button-github img {
+    opacity: .1;
+    transition: opacity .18s
+}
+.button-github:hover img {
+    opacity: .6
+}
+.col-12 {
+    width: 100%
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url(../fonts/icomoon.eot);
+    src: url(../fonts/icomoon.eot) format("embedded-opentype"), url(../fonts/icomoon.ttf) format("truetype"), url(../fonts/icomoon.woff) format("woff"), url(../fonts/icomoon.svg?) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon'!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.icon-dc:before {
+    content: "\e900"
+}
+.icon-tw:before {
+    content: "\f099"
+}
+.icon-yt:before {
+    content: "\f166"
+}
+.icon-tv:before {
+    content: "\f1e8"
+}
+.icon-pp:before {
+    content: "\f1ed"
+}
+.icon-rd:before {
+    content: "\f281"
+}
+
+.donate {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}

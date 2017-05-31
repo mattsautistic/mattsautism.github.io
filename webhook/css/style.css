@@ -1,0 +1,271 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background-color: #181D26;
+	font-family: "Roboto";
+}
+
+body {
+	background-color: #181D26;
+	font-family: "Roboto"
+}
+div.center {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.form, .previewWindow {
+	min-width: 280px;
+}
+
+.embedTitle, .embedText {
+	color: rgb(255, 255, 255);
+	font-family: "Helvetica";
+	font-size: 13px;
+	padding-left: 10px;
+	width: 60%;
+	padding-top: 6px;
+	padding-right: 10px;
+}
+
+.embedText {
+	color: hsla(0,0%,100%,.7);
+	padding-bottom: 8px;
+}
+
+.embedAuthorAvatarContainer {
+	padding: 10px;
+	height: 30px;
+	width: 40px;
+}
+
+.embedAuthorAvatar {
+	background-image: url("https://i.imgur.com/8Z6mW4p.png");
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	border-radius: 50%;
+}
+
+.embedAuthorName {
+	color: rgb(255, 255, 255);
+	font-family: "Helvetica";
+	font-size: 14px;
+	line-height: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 40px);
+	height: 32px;
+}
+
+.embedPreviewColor {
+	width: 4px;
+	background-color: #4F545C;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.embedPreviewContainer {
+	display: none;
+	flex-wrap: wrap;
+	margin-bottom: 16px;
+	position: relative;
+	bottom: 14px;
+}
+
+.embedPreviewBody {
+	background-color: rgba(46, 48, 54, 0.6);
+	border-color: rgba(46, 48, 54, 0.1);
+	border-left-color: none;
+	border-style: solid;
+	border-width: 1px;
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	width: 138px;
+	word-wrap: break-word;
+	max-width: calc(100% - 20px);
+}
+
+.messagePreview {
+	color: hsla(0,0%,100%,.7);
+	font-family: "Helvetica";
+	font-size: 14px;
+	text-align: left;
+	padding-right: 20px;
+	position: relative;
+	bottom: 6px;
+}
+
+.bodyPreviewContainer {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	width: calc(100% - 80px);
+}
+
+.bodyPreviewHeader {
+	display: flex;
+	flex-wrap: wrap;
+	height: 36px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.previewWindow {
+	background-color: #36393e;
+	margin: 20px auto auto auto;
+	display: flex;
+	flex-wrap: wrap;
+	word-wrap: break-word;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.avatarContainer {
+	padding: 20px;
+	display: inline-block;
+}
+
+.previewAvatar {
+	background-image: url("https://i.imgur.com/8Z6mW4p.png");
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: 40px 40px;
+}
+
+.usernamePreview h2 strong p {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.timestampPreview {
+	color: hsla(0,0%,100%,.2);
+	font-size: 12px;
+	letter-spacing: 0;
+	font-weight: 500;
+	text-transform: none;
+	margin-left: 6px;
+	margin-top: 24px;
+	text-overflow: ellipsis;
+}
+
+.timestampPreview p {
+	text-align: center;
+	margin: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.form {
+	background: #fff;
+	border-radius: 5px;
+	padding: 1.25em;
+	box-shadow: 0 0 28px -5px rgba(0, 0, 0, 1);
+	margin: auto;
+	margin-top: 200px;
+}
+
+.form-group {
+	margin: auto;
+}
+
+.form {
+	width: 400px;
+	background: #fff;
+	border-radius: 3px;
+	padding: 1.25em;
+	box-shadow: 0 0 28px -5px rgba(0, 0, 0, 1)
+}
+
+.btn-primary {
+	border: none;
+	background-color: #48c9b0;
+	color: #fff;
+	padding: 10px 19px;
+	border-radius: 35px;
+	text-transform: uppercase;
+	margin: auto;
+	margin-top: 18px;
+	display: block;
+}
+
+.btn-primary:focus {
+	outline: none;
+}
+
+.btn-primary:hover {
+	background-color: #1ABC9C;
+}
+
+.form-control {
+	transition: opacity .6s;
+	opacity: 1;
+	background: #fff;
+	font-size: 15px;
+	line-height: 1.467;
+}
+
+input {
+	transition: all 800ms;
+	font-family: "Roboto";
+	resize: none;
+	overflow: auto;
+	color: #34495e;
+	margin: .8em auto 0 auto;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.btn-primary:focus {
+	outline: none;
+	color: #48c9b0;
+}
+.btn-primary:hover {
+	background-color: #1ABC9C
+}
+.form-control {
+	opacity: 1;
+	background: #fff;
+	font-size: 15px;
+	line-height: 1.467
+}
+input {
+	font-family: "Roboto";
+	resize: none;
+	overflow: auto;
+	width: 100%;
+	color: #48c9b0;
+	margin-top: .8em;
+	outline-color:#48c9b0;
+}
+.input {
+	text-indent: 5px;
+}
+>>>>>>> a6e4817466a79fd7f290b139932e0934ab2c6d9c

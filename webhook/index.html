@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webhook</title>
+    <link rel='stylesheet prefetch' href='css/style.css'>
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:100,300'>
+</head>
+
+<body class="col-12">
+    <div class="form col-4">
+        <div class="form-group col-12">
+            <input class="input col-12" id="url" type="text" placeholder="URL">
+            <input class="input col-12" id="name" type="text" placeholder="Username">
+            <input class="input col-12" id="content" type="text" placeholder="Message">
+            <input class="input col-12" id="avatar" type="text" placeholder="Avatar URL">
+        </div>
+        <div class="form-group col-12">
+            <input class="input col-12 embed" id="author_name" type="text" placeholder="Author Name">
+            <input class="input col-12 embed" id="author_icon" type="text" placeholder="Author Avatar URL">
+            <input class="input col-12 embed" id="embed_title" type="text" placeholder="Embed Title">
+            <input class="input col-12 embed" id="embed_content" type="text" placeholder="Embed Text">
+            <input class="input col-12 embed" id="color" type="text" name="hex color" placeholder="#123456">
+        </div>
+        <button id="send" class="btn btn-primary btn-lg btn-block col-5" onclick="send()">Send</button>
+    </div>
+    <div class="previewWindow col-4">
+        <div class="avatarContainer">
+            <div class="previewAvatar"></div>
+        </div>
+        <div class="bodyPreviewContainer">
+            <div class="bodyPreviewHeader col-12">
+                <div class="usernamePreview">
+                    <h2><strong><p data-bind="text: previewUsername">Username</p></strong></h2>
+                </div>
+                <div class="timestampPreview">
+                    <p data-bind="text: timestampStr">Today at X:XX AM</p>
+                </div>
+            </div>
+            <div class="embedPreview col-12">
+                    <div class="messagePreview col-12"><p data-bind="text: previewMessage">Message</p></div>
+                    <div class="embedPreviewContainer">
+                        <div class="embedPreviewColor"></div>
+                        <div class="embedPreviewBody">
+                            <div class="embedAuthorAvatarContainer">
+                                <div class="embedAuthorAvatar"></div>
+                            </div>
+                            <div class="embedAuthorName"><p data-bind="text: previewAuthorName">Author Name</p></div>
+                            <div class="embedTitle col-12" data-bind="text: previewTitle">Embed Title</div>
+                            <div class="embedText col-12" data-bind="text: previewEmbedText">Embed Text</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function send() {
+            if (document.getElementById("url").value) {
+                var b, a = document.getElementById("url").value + "/slack";
+                b = document.getElementById("author_icon").value || document.getElementById("author_name").value || document.getElementById("embed_title").value || document.getElementById("embed_content").value ? {
+                    username: document.getElementById("name").value,
+                    icon_url: document.getElementById("avatar").value,
+                    text: document.getElementById("content").value,
+                    attachments: [{
+                        author_icon: document.getElementById("author_icon").value,
+                        author_name: document.getElementById("author_name").value,
+                        color: document.getElementById("color").value,
+                        fields: [{
+                            title: document.getElementById("embed_title").value,
+                            value: document.getElementById("embed_content").value
+                        }]
+                    }]
+                } : {
+                    username: document.getElementById("name").value,
+                    icon_url: document.getElementById("avatar").value,
+                    text: document.getElementById("content").value
+                }, post(a, b)
+            } else alert("You need to provide a webhook URL.")
+        }
+    </script>
+    <script>
+        function post(a, b) {
+            xhr = new XMLHttpRequest, xhr.open("POST", a, !0), xhr.setRequestHeader("Content-type", "application/json");
+            var c = JSON.stringify(b);
+            xhr.send(c), xhr.onreadystatechange = function() {
+                200 != this.status && alert(this.responseText)
+            }
+        }
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript" src="js/knockout-3.4.1.js"></script>
+    <script type="text/javascript" src="https://www.datejs.com/build/date.js"></script>
+    <script src="js/webhookpreview.js"></script>
+</body>
+</html>
